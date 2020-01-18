@@ -1,1 +1,4 @@
 <p>other-days works!</p>
+<div> {{ readingIndex }}</div>
+<div> temp: {{ weather?.list[readingIndex].main.temp }}</div>
+<img src="http://openweathermap.org/img/wn/{{ weather?.list[readingIndex].weather[0].icon }}@2x.png" alt="weather Icon">

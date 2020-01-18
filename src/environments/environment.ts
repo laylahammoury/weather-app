@@ -5,7 +5,7 @@
 export const environment = {
 
   API_key: "2b34e63d4b1ee92e6612c0e4904a1fea",
-  url:"https://api.openweathermap.org/data/2.5/forecast?q=London,us&appid=2b34e63d4b1ee92e6612c0e4904a1fea",
+  url:"https://api.openweathermap.org/data/2.5/forecast",
   production: false
 };
 

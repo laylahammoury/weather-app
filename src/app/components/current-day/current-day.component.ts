@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from 'src/app/services/weather.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-current-day',
@@ -9,10 +10,15 @@ import { WeatherService } from 'src/app/services/weather.service';
 export class CurrentDayComponent implements OnInit {
 
  private weather: any;
+ params = {
+  q: "Hebron,PS",
+  units: "metric",
+  appid : environment.API_key,
+};
   constructor(private weatherService: WeatherService) { }
 
   ngOnInit() {
-    this.weatherService.getWeather()
+    this.weatherService.getWeather(this.params)
     .subscribe(data => {this.weather = data});
   }
 

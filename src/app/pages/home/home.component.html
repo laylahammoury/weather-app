@@ -1,3 +1,4 @@
-<p>home works!</p>
 <app-current-day></app-current-day>
-<app-other-days></app-other-days>
+<div *ngFor = "let day of [9,17,25,33]">
+    <app-other-days [readingIndex] = "day"></app-other-days>
+</div>
