@@ -1,7 +1,9 @@
 <br>
 <div>{{ weather?.city.name }} - {{ weather?.city.country }}</div>
-<div>{{ weather?.list[dayReading].dt*1000 | date : 'EEEE'  }}</div>
-<div> temp: {{ weather?.list[dayReading].main.temp }}</div>
-<div>It feels like :{{ weather?.list[dayReading].main.feels_like }}</div>
-<div>{{ weather?.list[dayReading].weather[0].description }}</div>
-<img src="http://openweathermap.org/img/wn/{{ weather?.list[1].weather[0].icon }}@2x.png" alt="weather Icon">
+<div>{{ weather?.list[readingIndex].dt*1000 | date : 'EEEE'  }}</div>
+<div> temp: {{ weather?.list[readingIndex].main.temp }}  ْ C</div>
+<div>It feels like :{{ weather?.list[readingIndex].main.feels_like }} ْC</div>
+<div>{{ weather?.list[readingIndex].weather[0].description }}</div>
+<div>humidity percentage :{{ weather?.list[readingIndex].main.humidity }} %</div>
+
+<img src="http://openweathermap.org/img/wn/{{ weather?.list[readingIndex].weather[0].icon }}@2x.png" alt="weather Icon">

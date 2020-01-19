@@ -10,9 +10,18 @@ import { Observable } from 'rxjs';
 export class WeatherService {
 
   url = environment.url; 
-  params = new HttpParams;
+  params;
+  
   constructor(private http: HttpClient) { }
+
   getWeather(currentParams): Observable <any>{
     return this.http.get<any>(this.url, {params: currentParams})
+  }
+  getParams(): any{
+    return this.params;
+  }
+
+  setParams(par: any){
+    this.params = par;
   }
 }

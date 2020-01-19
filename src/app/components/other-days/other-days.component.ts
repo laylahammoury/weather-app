@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { WeatherService } from 'src/app/services/weather.service';
 import { environment } from 'src/environments/environment';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-other-days',
@@ -10,19 +11,24 @@ import { environment } from 'src/environments/environment';
 export class OtherDaysComponent implements OnInit {
 
   private weather: any;
+  // params;
   params = {
     q: "Hebron,PS",
     units: "metric",
     appid : environment.API_key
   };
   
-  constructor(private weatherService: WeatherService) { }
+  constructor(private weatherService: WeatherService, private router:Router) { }
   
   @Input() readingIndex: number;
   ngOnInit() {
-    console.log(this.params)
     this.weatherService.getWeather(this.params)
-    .subscribe(data=> {this.weather = data});
+    .subscribe(data => {
+      this.weather = data
+    });
+
+    this.weatherService.setParams(this.params);
+    console.log("parasms are " , this.params);
   }
 
 }
