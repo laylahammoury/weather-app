@@ -1,6 +1,7 @@
 <br>
 <div>{{ weather?.city.name }} - {{ weather?.city.country }}</div>
-<div> temp: {{ weather?.list[1].main.temp }}</div>
-<div>It feels like :{{ weather?.list[1].main.feels_like }}</div>
-<div>{{ weather?.list[1].weather[0].description }}</div>
+<div>{{ weather?.list[dayReading].dt*1000 | date : 'EEEE'  }}</div>
+<div> temp: {{ weather?.list[dayReading].main.temp }}</div>
+<div>It feels like :{{ weather?.list[dayReading].main.feels_like }}</div>
+<div>{{ weather?.list[dayReading].weather[0].description }}</div>
 <img src="http://openweathermap.org/img/wn/{{ weather?.list[1].weather[0].icon }}@2x.png" alt="weather Icon">

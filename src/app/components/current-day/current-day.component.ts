@@ -15,6 +15,7 @@ export class CurrentDayComponent implements OnInit {
   units: "metric",
   appid : environment.API_key,
 };
+  dayReading = 1;
   constructor(private weatherService: WeatherService) { }
 
   ngOnInit() {
