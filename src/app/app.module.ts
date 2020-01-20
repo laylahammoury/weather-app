@@ -10,7 +10,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { WeatherDetailsComponent } from './pages/weather-details/weather-details.component';
 import { WeatherService } from './services/weather.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { SearchResultComponent } from './components/search-result/search-result.component';
+import { CityFilterPipe } from './pipes/city-filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,12 +21,14 @@ import { SearchResultComponent } from './components/search-result/search-result.
     HomeComponent,
     WeatherDetailsComponent,
     routingComponents,
+    CityFilterPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule,
   ],
   providers: [WeatherService],
   bootstrap: [AppComponent]
