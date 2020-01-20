@@ -10,6 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { WeatherDetailsComponent } from './pages/weather-details/weather-details.component';
 import { WeatherService } from './services/weather.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SearchResultComponent } from './components/search-result/search-result.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     OtherDaysComponent,
     HomeComponent,
     WeatherDetailsComponent,
-    routingComponents
+    routingComponents,
+    SearchResultComponent,
   ],
   imports: [
     BrowserModule,
