@@ -9,7 +9,7 @@ import { OtherDaysComponent } from './components/other-days/other-days.component
 import { HomeComponent } from './pages/home/home.component';
 import { WeatherDetailsComponent } from './pages/weather-details/weather-details.component';
 import { WeatherService } from './services/weather.service';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,8 @@ import { WeatherService } from './services/weather.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [WeatherService],
   bootstrap: [AppComponent]
