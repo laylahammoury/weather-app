@@ -19,7 +19,6 @@ export class DetailsComponent implements OnInit {
     let id = parseInt(this.route.snapshot.paramMap.get('id'));
     this.readingIndex = id;
     this.params = this.weatherService.getParams(); 
-    console.log("parasms in details are " , this.params);
     
     this.weatherService.getWeather(this.params)
     .subscribe(data=> {this.weather = data});

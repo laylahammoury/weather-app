@@ -29,7 +29,6 @@ export class OtherDaysComponent implements OnInit {
     });
 
     this.weatherService.setParams(params);
-    console.log("parasms are " , params);
   }
 
 }
