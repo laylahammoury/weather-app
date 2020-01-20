@@ -10,16 +10,17 @@ import { environment } from 'src/environments/environment';
 export class CurrentDayComponent implements OnInit {
 
  private weather: any;
- params = {
-  q: "Hebron,PS",
-  units: "metric",
-  appid : environment.API_key,
-};
+//  params = {
+//   q: "Hebron,PS",
+//   units: "metric",
+//   appid : environment.API_key,
+// };
   readingIndex = 1;
   constructor(private weatherService: WeatherService) { }
 
   ngOnInit() {
-    this.weatherService.getWeather(this.params)
+    let params = this.weatherService.getParams();
+    this.weatherService.getWeather(params)
     .subscribe(data => {this.weather = data});
   }
 

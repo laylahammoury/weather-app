@@ -10,7 +10,11 @@ import { Observable } from 'rxjs';
 export class WeatherService {
 
   url = environment.url; 
-  params;
+  params = {
+    q: "Hebron,PS",
+    units: "metric",
+    appid : environment.API_key
+  };
   
   constructor(private http: HttpClient) { }
 

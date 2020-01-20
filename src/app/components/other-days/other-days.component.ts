@@ -12,23 +12,24 @@ export class OtherDaysComponent implements OnInit {
 
   private weather: any;
   // params;
-  params = {
-    q: "Hebron,PS",
-    units: "metric",
-    appid : environment.API_key
-  };
+  // params = {
+  //   q: "Hebron,PS",
+  //   units: "metric",
+  //   appid : environment.API_key
+  // };
   
   constructor(private weatherService: WeatherService, private router:Router) { }
   
   @Input() readingIndex: number;
   ngOnInit() {
-    this.weatherService.getWeather(this.params)
+    let params = this.weatherService.getParams();
+    this.weatherService.getWeather(params)
     .subscribe(data => {
       this.weather = data
     });
 
-    this.weatherService.setParams(this.params);
-    console.log("parasms are " , this.params);
+    this.weatherService.setParams(params);
+    console.log("parasms are " , params);
   }
 
 }

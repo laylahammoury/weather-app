@@ -1,4 +1,4 @@
 <input type="text" placeholder="Search by city name" [(ngModel)]="citySearch"/>
 <div *ngFor = "let city of cityList | cityFilter: citySearch">
-    <a (click) = "cityFilter( city.name, city.country )" > {{ city.name}} , {{ city.country }}</a>
+    <a [routerLink]="['/home']" routerLinkActive="router-link-active"  (click) = "cityFilter( city.name, city.country )" > {{ city.name}} , {{ city.country }}</a>
 </div>
