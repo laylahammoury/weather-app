@@ -7,11 +7,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { CurrentDayComponent } from './components/current-day/current-day.component';
 import { OtherDaysComponent } from './components/other-days/other-days.component';
 import { HomeComponent } from './pages/home/home.component';
-import { WeatherDetailsComponent } from './pages/weather-details/weather-details.component';
 import { WeatherService } from './services/weather.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CityFilterPipe } from './pipes/city-filter.pipe';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +22,15 @@ import { FormsModule } from '@angular/forms';
     WeatherDetailsComponent,
     routingComponents,
     CityFilterPipe,
+    LoginComponent,
   ],
   imports: [
-    FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FontAwesomeModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [WeatherService],
   bootstrap: [AppComponent]
