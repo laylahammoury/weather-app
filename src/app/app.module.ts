@@ -20,7 +20,6 @@ import { SearchResultComponent } from './components/search-result/search-result.
     HomeComponent,
     WeatherDetailsComponent,
     routingComponents,
-    SearchResultComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,4 @@
 <p>search-result works!</p>
+<div *ngFor = "let city of cityList| slice:0:10">
+    <div> {{ city.name}}</div>
+</div>
