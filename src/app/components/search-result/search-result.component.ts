@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import cities from 'src/data/city.list.min.json'
+import cities from 'src/assets/data/city.list.min.json'
 import { environment } from 'src/environments/environment'
 import { WeatherService } from 'src/app/services/weather.service';
 
@@ -12,21 +12,17 @@ import { WeatherService } from 'src/app/services/weather.service';
 export class SearchResultComponent implements OnInit {
   cityList = cities;
   citySearch ="";
-  // cityCountry;
  
   constructor( private weatherService: WeatherService) { }
 
   ngOnInit() {
   }
   cityFilter( cityName, cityCountry: string){
-    console.log("City is: " + cityName)
-    console.log("Country is: " + cityCountry)
     let params = {
       q: "" + cityName + "," + cityCountry,
       units: "metric",
       appid : environment.API_key
     };
     this.weatherService.setParams(params);
-    console.log("parasms are " , params);
   }
 }

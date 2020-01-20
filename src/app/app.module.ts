@@ -10,8 +10,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { WeatherService } from './services/weather.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CityFilterPipe } from './pipes/city-filter.pipe';
-import { FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { LoginComponent } from './pages/login/login.component';
+import { ScrollDirective } from './directives/scroll.directive';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { LoginComponent } from './pages/login/login.component';
     routingComponents,
     CityFilterPipe,
     LoginComponent,
+    ScrollDirective,
   ],
   imports: [
     BrowserModule,
