@@ -19,7 +19,6 @@ import { LoginComponent } from './components/login/login.component';
     CurrentDayComponent,
     OtherDaysComponent,
     HomeComponent,
-    WeatherDetailsComponent,
     routingComponents,
     CityFilterPipe,
     LoginComponent,
