@@ -6,8 +6,12 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class CityFilterPipe implements PipeTransform {
 
   transform(value: any, citySearch: string): any {
-    if (!citySearch)
-      return value.filter(city=> city.country == "PA")
+    if (citySearch == ""){
+      let palestine = value.filter(city=> city.country == "PS");
+      return palestine.slice(1,30);
+      
+    }
+    return value.filter(city => city.name.toLowerCase().includes(citySearch.toLowerCase()));
   }
 
 }

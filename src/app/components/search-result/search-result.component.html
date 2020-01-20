@@ -1,7 +1,4 @@
-<p>search-result works!</p>
-<!-- <input type="text" placeholder="Search by city name" [(ngModule)]="citySearch"/> -->
-<input type="text" placeholder="Search by city name" />
+<input type="text" placeholder="Search by city name" [(ngModel)]="citySearch"/>
 <div *ngFor = "let city of cityList | cityFilter: citySearch">
-<!-- <div *ngFor = "let city of cityList "> -->
-    <div> {{ city.name}}</div>
+    <a (click) = "cityFilter( city.name, city.country )" > {{ city.name}} , {{ city.country }}</a>
 </div>

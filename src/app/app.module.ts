@@ -24,11 +24,11 @@ import { FormsModule } from '@angular/forms';
     CityFilterPipe,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FontAwesomeModule,
-    FormsModule,
   ],
   providers: [WeatherService],
   bootstrap: [AppComponent]
