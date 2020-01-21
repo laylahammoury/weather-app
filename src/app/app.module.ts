@@ -10,7 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { WeatherService } from './services/weather.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CityFilterPipe } from './pipes/city-filter.pipe';
-import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
@@ -30,6 +30,7 @@ import { LoginComponent } from './components/login/login.component';
     FontAwesomeModule,
     FormsModule,
     ReactiveFormsModule,
+    // Validators,
   ],
   providers: [WeatherService],
   bootstrap: [AppComponent]
