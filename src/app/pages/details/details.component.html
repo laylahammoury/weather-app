@@ -1,6 +1,17 @@
-<div>{{ weather?.list[readingIndex].dt*1000 | date : 'EEEE'  }}</div>
-<div> temp: {{ weather?.list[readingIndex].main.temp }}  ْC</div>
-<div>It feels like :{{ weather?.list[readingIndex].main.feels_like }} ْC</div>
-<div>humidity percentage :{{ weather?.list[readingIndex].main.humidity }} %</div>
-<div>{{ weather?.list[readingIndex].weather[0].description }}</div>
-<img src="http://openweathermap.org/img/wn/{{ weather?.list[readingIndex].weather[0].icon }}@2x.png" alt="weather Icon">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>{{ weather?.list[readingIndex].dt*1000 | date : 'EEEE'  }}</div>
+    <div> temp: {{ weather?.list[readingIndex].main.temp }}  ْC</div>
+    <div>It feels like :{{ weather?.list[readingIndex].main.feels_like }} ْC</div>
+    <div>humidity percentage :{{ weather?.list[readingIndex].main.humidity }} %</div>
+    <div>{{ weather?.list[readingIndex].weather[0].description }}</div>
+    <img src="http://openweathermap.org/img/wn/{{ weather?.list[readingIndex].weather[0].icon }}@2x.png" alt="weather Icon">
+</body>
+</html>

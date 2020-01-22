@@ -11,7 +11,7 @@ import { WeatherService } from './services/weather.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CityFilterPipe } from './pipes/city-filter.pipe';
 import { FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
-import { LoginComponent } from './components/login/login.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
