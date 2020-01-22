@@ -8,40 +8,46 @@
 </head>
 <body>
     
-    <h2>Login to access weather date</h2>
-    <form [formGroup] = 'loginForm'>
-        <!-- <div>
-            <label> Username</label>
-            <input type="text" name="username" [formControl] = "username" placeholder="Enter username"
-            required minlength="8">
-        </div> -->
-        <div>
-            <label>Email</label> <br>
-            <input [class.is-invalid]="email.invalid 
-                                    && email.touched" 
-            formControlName="email" type="email" name="email" placeholder="email@pseu.edu" />
-            <div *ngIf="(email.invalid && email.touched) || email.dirty">
-                <span *ngIf= "email.errors?.required">Username is required</span>
-                <span *ngIf= "email.errors?.maxlength">Username must be shorter that 180 character </span>
-                <span *ngIf="email.errors?.pattern">Please provide a valid email address accourding to the provided pattern</span>
-            </div>
+    <div class="felx-container">
+        
+        <div class="felx-item">
+            <h2>Login to access weather date</h2>
         </div>
-        <div>
-            <label>Password</label> <br>
-            <input [class.is-invalid]="password.invalid 
-            && password.touched" 
-            formControlName="password" type="password" name="password" >
-            <div *ngIf="(password.invalid && password.touched) || password.dirty">
-                <span *ngIf= "password.errors?.required">Password is required</span>
-                <span *ngIf= "password.errors?.maxlength || password.errors?.minlength">Password must have 6-12 character </span>
-                <span *ngIf="password.errors?.pattern">
-                    Password must has at least one uppercase letter, one lowercase letter and one special character
-                </span>
-    
-    
+        
+        <form class="form" [formGroup] = 'loginForm'>
+            <!-- <div>
+                <label> Username</label>
+                <input type="text" name="username" [formControl] = "username" placeholder="Enter username"
+                required minlength="8">
+            </div> -->
+            <div>
+                <label>Email</label> <br>
+                <input class="felx-item" [class.is-invalid]="email.invalid 
+                                        && email.touched" 
+                formControlName="email" type="email" name="email" placeholder="email@pseu.edu" />
+                <div *ngIf="(email.invalid && email.touched) || email.dirty">
+                    <span *ngIf= "email.errors?.required">Username is required</span>
+                    <span *ngIf= "email.errors?.maxlength">Username must be shorter that 180 character </span>
+                    <span *ngIf="email.errors?.pattern">Please provide a valid email address accourding to the provided pattern</span>
+                </div>
             </div>
-        </div>
-        <button type="submit">Login</button>
-    </form>
+            <div>
+                <label>Password</label> <br>
+                <input class="felx-item" [class.is-invalid]="password.invalid 
+                && password.touched" 
+                formControlName="password" type="password" name="password" >
+                <div *ngIf="(password.invalid && password.touched) || password.dirty">
+                    <span *ngIf= "password.errors?.required">Password is required</span>
+                    <span *ngIf= "password.errors?.maxlength || password.errors?.minlength">Password must have 6-12 character </span>
+                    <span *ngIf="password.errors?.pattern">
+                        Password must has at least one uppercase letter, one lowercase letter and one special character
+                    </span>
+        
+        
+                </div>
+            </div>
+            <button class="sbmt-btn" type="submit">Login</button>
+        </form>
+    </div>
 </body>
 </html>

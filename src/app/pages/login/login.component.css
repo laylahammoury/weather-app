@@ -1,6 +1,43 @@
+
+html *{
+    font-style: italic
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+html {
+    background-image: url("../../../assets/images/background.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .is-invalid{
     border-color: red;
 }
 .hide{
     display: none;
+}
+.felx-container{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.felx-item{
+    padding: 5px;
+    margin: 10px;
+    line-height: 20px;
+}
+.form{
+    margin-top: 10px;
+}
+.sbmt-btn{
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 100px;
 }
