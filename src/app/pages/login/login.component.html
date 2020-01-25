@@ -1,34 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    
-    <div class="felx-container">
+<div class="body">
+    <div class="flex-container">
         
-        <div class="felx-item">
+        <div class="welcome-msg">
             <h2>Login to access weather date</h2>
         </div>
         
         <form class="form" [formGroup] = 'loginForm'>
-            <!-- <div>
-                <label> Username</label>
-                <input type="text" name="username" [formControl] = "username" placeholder="Enter username"
-                required minlength="8">
-            </div> -->
-            <div>
+            <div class="email-container">
                 <label>Email</label> <br>
                 <input class="felx-item" [class.is-invalid]="email.invalid 
                                         && email.touched" 
                 formControlName="email" type="email" name="email" placeholder="email@pseu.edu" />
                 <div *ngIf="(email.invalid && email.touched) || email.dirty">
-                    <span *ngIf= "email.errors?.required">Username is required</span>
-                    <span *ngIf= "email.errors?.maxlength">Username must be shorter that 180 character </span>
-                    <span *ngIf="email.errors?.pattern">Please provide a valid email address accourding to the provided pattern</span>
+                    <span class="error" *ngIf= "email.errors?.required">Username is required</span>
+                    <span class="error" *ngIf= "email.errors?.maxlength">Username must be shorter that 180 character </span>
+                    <span class="error" *ngIf="email.errors?.pattern">Please provide a valid email address accourding to the provided pattern</span>
                 </div>
             </div>
             <div>
@@ -37,9 +23,9 @@
                 && password.touched" 
                 formControlName="password" type="password" name="password" >
                 <div *ngIf="(password.invalid && password.touched) || password.dirty">
-                    <span *ngIf= "password.errors?.required">Password is required</span>
-                    <span *ngIf= "password.errors?.maxlength || password.errors?.minlength">Password must have 6-12 character </span>
-                    <span *ngIf="password.errors?.pattern">
+                    <span class="error" *ngIf= "password.errors?.required">Password is required</span>
+                    <span class="error" *ngIf= "password.errors?.maxlength || password.errors?.minlength">Password must have 6-12 character </span>
+                    <span class="error" *ngIf="password.errors?.pattern">
                         Password must has at least one uppercase letter, one lowercase letter and one special character
                     </span>
         
@@ -49,5 +35,4 @@
             <button class="sbmt-btn" type="submit">Login</button>
         </form>
     </div>
-</body>
-</html>
+</div>

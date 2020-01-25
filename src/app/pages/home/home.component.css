@@ -1,0 +1,31 @@
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.flex-element{
+    padding: 5px;
+    margin: 8px;
+    text-align: center;
+}
+.search{
+    margin-left: 10px;
+    padding-top: 10px;
+}
+.current{
+    margin-top: 50px;
+}
+.body{
+    margin: 0;
+    height: 100%;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(45,196,253,1) 8%, rgba(72,34,195,1) 100%);    
+}
+.body *{
+    color: white;
+}
+a{
+    color: white;
+}

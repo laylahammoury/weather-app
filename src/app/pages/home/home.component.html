@@ -1,18 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <a routerLink = '/search'> 
-        <fa-icon [icon]="faSearch"></fa-icon>
-    </a>
-    <app-current-day></app-current-day>
-    <div *ngFor = "let day of [9,17,25,33]">
-        <app-other-days [readingIndex] = "day"></app-other-days>
+<div class="body">
+    <div class="search">
+        <a routerLink = '/search'> 
+            <fa-icon [icon]="faSearch"></fa-icon>Change City
+        </a>
     </div>
-</body>
-</html>
+    <div class="current">
+        <app-current-day></app-current-day>
+    </div>
+    <div class="flex-container">
+        <div *ngFor = "let day of [9,17,25,33]" class="flex-element">
+            <app-other-days [readingIndex] = "day"></app-other-days>
+        </div>
+    </div>
+</div>

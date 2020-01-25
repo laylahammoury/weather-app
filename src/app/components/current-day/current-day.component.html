@@ -1,20 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <br>
-    <div>{{ weather?.city.name }} - {{ weather?.city.country }}</div>
-    <div>{{ weather?.list[readingIndex].dt*1000 | date : 'EEEE'  }}</div>
-    <div> temp: {{ weather?.list[readingIndex].main.temp }}  ْ C</div>
-    <div>It feels like :{{ weather?.list[readingIndex].main.feels_like }} ْC</div>
-    <div>{{ weather?.list[readingIndex].weather[0].description }}</div>
-    <div>humidity percentage :{{ weather?.list[readingIndex].main.humidity }} %</div>
-    
-    <img src="http://openweathermap.org/img/wn/{{ weather?.list[readingIndex].weather[0].icon }}@2x.png" alt="weather Icon">
-</body>
-</html>
+<div class="container">
+    <img class="desc-img" src="http://openweathermap.org/img/wn/{{ weather?.list[readingIndex].weather[0].icon }}@2x.png" alt="weather Icon">
+    <div class="description element">{{ weather?.list[readingIndex].weather[0].description }}</div>
+    <div class="element">{{ weather?.city.name }} - {{ weather?.city.country }}</div>
+    <div class="element">{{ weather?.list[readingIndex].dt*1000 | date : 'EEEE'  }}</div>
+    <div class="temp">{{ weather?.list[readingIndex].main.temp }}  ْ </div>
+    <div class="element">Feels like {{ weather?.list[readingIndex].main.feels_like }}  ْ</div>
+</div>
+
+

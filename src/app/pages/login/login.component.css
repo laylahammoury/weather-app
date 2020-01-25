@@ -1,17 +1,11 @@
-
-html *{
-    font-style: italic
-}
-html, body {
-    height: 100%;
-    margin: 0;
-}
-html {
+.body {
     background-image: url("../../../assets/images/background.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100%;
+    /* opacity: 0.5; */
 }
 .is-invalid{
     border-color: red;
@@ -19,7 +13,7 @@ html {
 .hide{
     display: none;
 }
-.felx-container{
+.flex-container{
     height: 100%;
     padding: 0;
     margin: 0;
@@ -33,11 +27,40 @@ html {
     margin: 10px;
     line-height: 20px;
 }
+.welcome-msg{
+    font-family: Courier, monospace;
+    width: 65%;
+    margin-bottom: 30px;
+}
 .form{
+    /* font-style: italic; */
     margin-top: 10px;
+    width: 220px;
+    max-width: 220px;
+    background: rgba(242, 245, 242, 0.45);
+    padding: 20px;
 }
 .sbmt-btn{
-    margin-top: 30px;
-    margin-left: 30px;
-    width: 100px;
+    align-items: center;
+    border-radius: 20px;
+    background-color: rgb(76, 152, 175); 
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    font-size: 16px;
+    margin: 15px 50px;
+}
+input{
+    border-radius: 15px;
+    width: 180px;
+}
+label{
+    font-size: larger;
+}
+.error{
+    color: red;
+}
+.email-container{
+    margin-bottom: 30px;
+
 }

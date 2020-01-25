@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.body{
+    top: 0px;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.element{
+    margin: 5px;
+}
+.temp{
+    font-size:xx-large;
+}
+.description{
+    font-size: x-large;
+}
+.desc-img{
+    margin-bottom: -10px;
+}

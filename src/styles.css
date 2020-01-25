@@ -18,6 +18,10 @@
     margin: 8px 0;
     }
   
+    html, body{
+        height: 100%;
+        margin: 0;
+    }
     p {
     margin: 0;
     }
