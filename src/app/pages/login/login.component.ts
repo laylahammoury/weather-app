@@ -6,10 +6,10 @@ import { FormGroup, FormControl, FormBuilder, Validators, ReactiveFormsModule } 
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  // loginForm = new FormGroup({
-  //   email: new FormControl(''),
-  //   password: new FormControl(''),
-  // });
+ user = {
+   email:"guest@pseu.edu",
+   password:"GUEST@guest"
+ }
   loginForm = this.fb.group({
     email:['', [
       Validators.required,
@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
       Validators.minLength(6),
       Validators.maxLength(12),
       // Validators.pattern("^(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[#?!@$%^&*-])[A-Za-z\d@$!%*#?&]")]]
-      Validators.pattern("^(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*#?&])[a-zA-Z\d@$!%*#?&]")]]
+      Validators.pattern("^(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$")]]
       // Validators.pattern("^([a-z])[a-zA-Z\d@$!%*#?&]")]]
       // Validators.pattern("^(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[#?!@$%^&*-])[A-Za-z\d@$!%*#?&]")]]
   })

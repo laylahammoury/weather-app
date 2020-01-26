@@ -26,6 +26,7 @@
                     <span class="error" *ngIf= "password.errors?.required">Password is required</span>
                     <span class="error" *ngIf= "password.errors?.maxlength || password.errors?.minlength">Password must have 6-12 character </span>
                     <span class="error" *ngIf="password.errors?.pattern">
+                        {{password.errors}}
                         Password must has at least one uppercase letter, one lowercase letter and one special character
                     </span>
         
@@ -34,5 +35,7 @@
             </div>
             <button class="sbmt-btn" type="submit">Login</button>
         </form>
+        <div class="hint">Hint: if you are a guest enter "guest@pseu.edu as an email
+             and  "GUEST@guest as a password</div>
     </div>
 </div>
