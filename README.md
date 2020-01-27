@@ -26,7 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 ## install the following 
-$ npm install @fortawesome/fontawesome-svg-core
-$ npm install @fortawesome/free-solid-svg-icons
-$ npm install @fortawesome/angular-fontawesome@0.4.x
-$ npm install -g @angular/material
+$ npm install @fortawesome/fontawesome-svg-core <br/>
+$ npm install @fortawesome/free-solid-svg-icons <br/>
+$ npm install @fortawesome/angular-fontawesome@0.4.x <br/>
+npm install --save @angular/material
