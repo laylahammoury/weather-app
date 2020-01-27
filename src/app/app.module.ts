@@ -32,7 +32,6 @@ import { ScrollDirective } from './directives/scroll.directive';
     FontAwesomeModule,
     FormsModule,
     ReactiveFormsModule,
-    // Validators,
   ],
   providers: [WeatherService],
   bootstrap: [AppComponent]

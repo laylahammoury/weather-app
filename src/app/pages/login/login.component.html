@@ -5,7 +5,7 @@
             <h2>Login to access weather date</h2>
         </div>
         
-        <form class="form" [formGroup] = 'loginForm'>
+        <form class="form" [formGroup] = 'loginForm' (ngSubmit)="onSubmit()">
             <div class="email-container">
                 <label>Email</label> <br>
                 <input class="felx-item" [class.is-invalid]="email.invalid 

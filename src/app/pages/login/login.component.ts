@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms'
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -19,10 +20,7 @@ export class LoginComponent implements OnInit {
       Validators.required,
       Validators.minLength(6),
       Validators.maxLength(12),
-      // Validators.pattern("^(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[#?!@$%^&*-])[A-Za-z\d@$!%*#?&]")]]
       Validators.pattern("^(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$")]]
-      // Validators.pattern("^([a-z])[a-zA-Z\d@$!%*#?&]")]]
-      // Validators.pattern("^(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[#?!@$%^&*-])[A-Za-z\d@$!%*#?&]")]]
   })
 
  
@@ -32,9 +30,19 @@ export class LoginComponent implements OnInit {
   get password(){
     return this.loginForm.get('password');
   }
-  constructor(private fb:FormBuilder) { }
+  constructor(private fb:FormBuilder, private router: Router) { }
 
   ngOnInit() {
   }
 
+  onSubmit(){
+    if(this.loginForm.value.email == this.user.email && this.loginForm.value.password == this.user.password ){
+      console.log("works well")
+      this.router.navigateByUrl('/home');
+    }
+    else{
+      console.log("!work well")
+      alert("insert valid email address and password");
+    }
+  }
 }
