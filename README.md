@@ -2,7 +2,7 @@ This is a web page designed as a mobile view, to show the weather in your countr
 When you click on a weekday you get more details oof the weather  
 ![image](https://user-images.githubusercontent.com/49364252/90986735-bf3fcb80-e58d-11ea-9bfe-c11c29bdc20f.png)
 ![image](https://user-images.githubusercontent.com/49364252/90986757-e8f8f280-e58d-11ea-89ed-01c5c1c6a401.png)
-![image](https://user-images.githubusercontent.com/49364252/90986759-ebf3e300-e58d-11ea-961e-c1068a7634c9.png)
+![image](https://user-images.githubusercontent.com/49364252/90986769-0928b180-e58e-11ea-9e0f-b8dc27b2cb81.png)
 
 ## TESTING  
 When testing **inspect the pages as a GalaxyS5 phone view**  
